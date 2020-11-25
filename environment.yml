@@ -5,14 +5,12 @@ channels:
   - defaults
   - mosdef
   - omnia
-  - glotzer
-  - bioconda
 
 dependencies:
-  - python=3.5
+  - python>=3.6
   - numpy
   - scipy
-  - packmol=1.0.0
+  - packmol>=1!18.013
   - nglview>=0.6.2.3
   - oset
   - parmed
@@ -21,10 +19,6 @@ dependencies:
   - openbabel
   - jupyter
   - nbformat
-  - ipykernel
-  - openmm
-  - networkx
   - six
-  - plyplus
-  - requests
-  - lxml
+  - foyer
+  - py3Dmol
