@@ -7,8 +7,8 @@ dependencies:
   - python>=3.6
   - numpy
   - scipy
-  - packmol>=1!18.013
-  - nglview>=0.6.2.3
+  - packmol>=20
+  - nglview>=3
   - parmed
   - mdtraj
   - gsd
@@ -16,5 +16,6 @@ dependencies:
   - rdkit
   - jupyter
   - nbformat
+  - mbuild
   - foyer
   - py3Dmol
