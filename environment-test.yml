@@ -1,4 +1,4 @@
-name: mbuild-binder
+name: mbuild-tutorials
 
 channels:
   - conda-forge
@@ -15,7 +15,10 @@ dependencies:
   - openbabel
   - rdkit
   - jupyter
+  - ipython=7.10.0
   - nbformat
   - mbuild
   - foyer
   - py3Dmol
+  - pytest
+  - nbval
