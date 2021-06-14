@@ -30,4 +30,4 @@ jobs:
       - name: run nbval
         shell: bash -l {0}
         run: |
-          python -m pytest --nbval-lax --verbose
+          python -m pytest --nbval-lax --sanitize-with nbval_sanitize.cfg --verbose
