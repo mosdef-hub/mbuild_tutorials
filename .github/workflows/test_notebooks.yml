@@ -1,0 +1,33 @@
+# This workflow will install Python dependencies, run tests for a variety of python versions
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python package
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+  # daily at 06:15
+    - cron: 15 06 * * *
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: test
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: install mamba
+        uses: mamba-org/provision-with-micromamba@main
+        with:
+          environment-file: environment-test.yml
+          environment-name: mbuild-tutorials
+
+      # linux and osx
+      - name: run nbval
+        shell: bash -l {0}
+        run: |
+          python -m pytest --nbval-lax --sanitize-with nbval_sanitize.cfg --verbose
